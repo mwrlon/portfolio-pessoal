@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Marlon Miranda Junior - Desenvolvedor Full Stack (Node.js, MySQL, APIs REST). Competidor SENAC TI 2026.">
+    <title>Marlon Miranda Jr. | Desenvolvedor Full Stack</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) + configuração do tema -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Estilos customizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="selection:bg-brand-500 selection:text-white">
+
+    <!-- HEADER NAV -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        MM
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-lg text-white tracking-tight group-hover:text-brand-500 transition-colors">Marlon Miranda<span class="text-brand-500">.</span> Jr</span>
+                        <span class="text-[10px] text-zinc-400 font-mono tracking-widest uppercase">Full Stack Dev</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#sobre" class="text-zinc-300 hover:text-brand-500 transition-colors py-1">Sobre mim</a>
+                    <a href="#projetos" class="text-zinc-300 hover:text-brand-500 transition-colors py-1">Projetos</a>
+                    <a href="#skills" class="text-zinc-300 hover:text-brand-500 transition-colors py-1">Habilidades</a>
+                    <a href="#trajetoria" class="text-zinc-300 hover:text-brand-500 transition-colors py-1">Trajetória</a>
+                    <a href="#contato" class="text-zinc-300 hover:text-brand-500 transition-colors py-1">Contato</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#contato" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-semibold rounded-xl group bg-gradient-accent group-hover:from-pink-500 group-hover:to-brand-500 text-white shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all">
+                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-zinc-950 rounded-[10px] group-hover:bg-opacity-0">
+                            <i class="fa-solid me-2 fa-paper-plane text-brand-500 group-hover:text-white transition-colors"></i>Vamos Conversar
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Menu" class="md:hidden text-zinc-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-zinc-800 bg-zinc-950/95 px-4 pt-2 pb-6 space-y-3">
+            <a href="#sobre" class="block py-2 text-zinc-300 hover:text-brand-500 font-medium mobile-link">Sobre mim</a>
+            <a href="#projetos" class="block py-2 text-zinc-300 hover:text-brand-500 font-medium mobile-link">Projetos</a>
+            <a href="#skills" class="block py-2 text-zinc-300 hover:text-brand-500 font-medium mobile-link">Habilidades</a>
+            <a href="#trajetoria" class="block py-2 text-zinc-300 hover:text-brand-500 font-medium mobile-link">Trajetória</a>
+            <a href="#contato" class="block py-2 text-zinc-300 hover:text-brand-500 font-medium mobile-link">Contato</a>
+            <a href="#contato" class="block text-center mt-4 w-full py-3 bg-gradient-accent text-white font-semibold rounded-xl shadow-md mobile-link">
+                Falar Comigo
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden min-h-screen flex items-center">
+        <!-- Background Decorative Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[140px] pointer-events-none animate-pulse-glow"></div>
+        <div class="absolute top-10 right-10 w-72 h-72 bg-brand-violet/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+                        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                            <i class="fa-solid fa-trophy me-2 text-brand-500"></i> Competidor SENAC TI 2026
+                        </span>
+                        <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-800/80 text-zinc-300 border border-zinc-700">
+                            <i class="fa-solid fa-graduation-cap me-2 text-brand-violet"></i> Dev Sistemas Bilingüe
+                        </span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+                        Construindo aplicações web <span class="text-gradient">robustas, escaláveis e eficientes.</span>
+                    </h1>
+
+                    <!-- Paragraph Description -->
+                    <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Olá! Sou <strong class="text-white font-semibold">Marlon Miranda Junior</strong>, desenvolvedor Full Stack focado em arquitetura de <span class="text-zinc-200 underline decoration-brand-500 underline-offset-4">APIs REST em Node.js</span>, integração com bancos relacionais e interfaces modernas responsivas.
+                    </p>
+
+                    <!-- CTAs & Social Links -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#projetos" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-accent text-white font-bold rounded-xl shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all text-center">
+                            <i class="fa-solid fa-code me-2"></i>Ver Meus Projetos
+                        </a>
+                        <button onclick="copyToClipboard('marlonmjr16@gmail.com', 'E-mail copiado para a área de transferência!')" class="w-full sm:w-auto px-6 py-3.5 bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 font-semibold rounded-xl transition-all flex items-center justify-center space-x-2 group">
+                            <i class="fa-regular fa-copy text-brand-500 group-hover:scale-110 transition-transform"></i>
+                            <span>marlonmjr16@gmail.com</span>
+                        </button>
+                    </div>
+
+                    <!-- Quick Tech Strip -->
+                    <div class="pt-6 border-t border-zinc-800/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-zinc-400 text-xs font-mono">
+                        <span class="text-zinc-500 uppercase tracking-widest text-[11px] font-bold">Stack Base:</span>
+                        <span class="flex items-center hover:text-white transition-colors"><i class="fa-brands fa-node-js text-emerald-500 text-base me-1.5"></i> Node.js</span>
+                        <span class="flex items-center hover:text-white transition-colors"><i class="fa-solid fa-database text-sky-400 text-base me-1.5"></i> MySQL</span>
+                        <span class="flex items-center hover:text-white transition-colors"><i class="fa-brands fa-python text-yellow-500 text-base me-1.5"></i> Python</span>
+                        <span class="flex items-center hover:text-white transition-colors"><i class="fa-brands fa-git-alt text-orange-500 text-base me-1.5"></i> Git/GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Right Visual / Photo Frame -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        
+                        <!-- Glowing Backing Backdrop -->
+                        <div class="absolute -inset-1 bg-gradient-accent rounded-3xl blur-xl opacity-40 animate-pulse-glow"></div>
+                        
+                        <!-- Main Card Frame -->
+                        <div class="relative glass-card rounded-3xl p-4 sm:p-5 border border-zinc-700/60 shadow-2xl overflow-hidden">
+                            <!-- Image Container -->
+                            <div class="relative rounded-2xl overflow-hidden bg-zinc-900 aspect-[4/5] group">
+                                <img src="assets/img/foto-marlon.jpg" 
+                                     alt="Marlon Miranda Junior - SENAC TI" 
+                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 filter contrast-105">
+                                
+                                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80"></div>
+                                
+                                <!-- Floating Badge on Image -->
+                                <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 flex items-center justify-between">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                                        <div>
+                                            <p class="text-xs font-bold text-white">Disponível para Oportunidades</p>
+                                            <p class="text-[10px] text-zinc-400">Estágio & Projetos Software</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-mono font-bold text-brand-400">Erechim-RS</span>
+                                </div>
+                            </div>
+
+                            <!-- Decorative Terminal Card Header -->
+                            <div class="mt-4 p-3 bg-zinc-950 rounded-xl border border-zinc-800 font-mono text-xs text-zinc-300 space-y-1">
+                                <div class="flex items-center space-x-1.5 pb-2 border-b border-zinc-800/80 mb-2">
+                                    <span class="code-dot bg-red-500"></span>
+                                    <span class="code-dot bg-yellow-500"></span>
+                                    <span class="code-dot bg-green-500"></span>
+                                    <span class="text-[10px] text-zinc-500 ms-2">marlon@dev:~</span>
+                                </div>
+                                <p class="text-zinc-400"><span class="text-brand-500">$</span> node --version <span class="text-emerald-400">v20.x</span></p>
+                                <p class="text-zinc-400"><span class="text-brand-500">$</span> status --competitor <span class="text-brand-pink font-bold">SENAC_2026_READY</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & SENAC COMPETITION SECTION -->
+    <section id="sobre" class="py-20 relative bg-zinc-950/60 border-y border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <p class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Trajetória & Filosofia</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Focado em solução de problemas reais com código limpo.
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Combinando lógica apurada, entrega rápida sob pressão e constantes estudos na área de Tecnologia da Informação.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Main Narrative -->
+                <div class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4 text-zinc-300 leading-relaxed text-sm sm:text-base">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <div class="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-500">
+                                <i class="fa-solid fa-user-astronaut"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Quem é Marlon Jr.?</h3>
+                        </div>
+                        <p>
+                            Estudante do curso <strong class="text-white">Técnico em Desenvolvimento de Sistemas Bilingüe no SENAC Erechim</strong> e apaixonado por criar arquiteturas de backend eficientes com Node.js, Express e MySQL.
+                        </p>
+                        <p>
+                            Tenho perfil analítico e dedicação focada. Minha rotina envolve modelar bancos de dados relacionais, criar rotas de APIs REST organizadas e desenvolver interfaces intuitivas com TailwindCSS e JavaScript moderno.
+                        </p>
+                        <p class="text-zinc-400 text-xs sm:text-sm bg-zinc-900/80 p-4 rounded-xl border border-zinc-800/80 italic">
+                            "Busco uma oportunidade de estágio em Desenvolvimento de Software para aplicar meus conhecimentos em programação, evoluir tecnicamente e agregar valor contínuo com dedicação e responsabilidade."
+                        </p>
+                    </div>
+
+                    <!-- Soft Skills Pills -->
+                    <div class="pt-4 border-t border-zinc-800">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-3 font-semibold">Soberanas Softskills:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-zinc-900 border border-zinc-700/60 rounded-lg text-xs font-medium text-zinc-200"><i class="fa-solid fa-bolt text-yellow-400 me-1.5"></i>Aprendizado Rápido</span>
+                            <span class="px-3 py-1 bg-zinc-900 border border-zinc-700/60 rounded-lg text-xs font-medium text-zinc-200"><i class="fa-solid fa-gauge-high text-brand-500 me-1.5"></i>Eficiência Sob Pressão</span>
+                            <span class="px-3 py-1 bg-zinc-900 border border-zinc-700/60 rounded-lg text-xs font-medium text-zinc-200"><i class="fa-solid fa-people-group text-sky-400 me-1.5"></i>Trabalho em Equipe</span>
+                            <span class="px-3 py-1 bg-zinc-900 border border-zinc-700/60 rounded-lg text-xs font-medium text-zinc-200"><i class="fa-solid fa-brain text-brand-violet me-1.5"></i>Lógica Apurada</span>
+                            <span class="px-3 py-1 bg-zinc-900 border border-zinc-700/60 rounded-lg text-xs font-medium text-zinc-200"><i class="fa-solid fa-list-check text-emerald-400 me-1.5"></i>Organização</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlight SENAC Competition Card -->
+                <div class="lg:col-span-5 relative glass-card rounded-2xl p-6 sm:p-8 bg-gradient-to-br from-brand-card via-zinc-900 to-zinc-950 border border-brand-500/30 flex flex-col justify-between">
+                    <!-- Badge -->
+                    <div class="absolute -top-3 right-6 bg-gradient-accent text-white font-bold text-[11px] uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
+                        Destaque SENAC
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center text-white text-xl shadow-lg shadow-brand-500/30">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white">
+                            Competição de TI - SENAC 2026
+                        </h3>
+                        <p class="text-xs font-mono text-brand-400">21 a 27 de Junho de 2026</p>
+
+                        <p class="text-sm text-zinc-300 leading-relaxed">
+                            Participação como competidor em desafio intensivo de desenvolvimento de software Full Stack, construindo uma aplicação completa do zero sob prazos rigorosos.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs text-zinc-300">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-500 mt-0.5 me-2"></i>
+                                <span>Construção e integração completa de APIs REST em Node.js;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-500 mt-0.5 me-2"></i>
+                                <span>Modelagem relacional e queries otimizadas em banco de dados MySQL;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-500 mt-0.5 me-2"></i>
+                                <span>Módulo de autenticação segura e gerenciamento de permissões;</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-circle-check text-brand-500 mt-0.5 me-2"></i>
+                                <span>Apresentação defensiva da solução técnica para banca examinadora.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between text-xs text-zinc-400">
+                        <span><i class="fa-solid fa-shield-halved text-brand-violet me-1"></i> Desafio Sob Pressão</span>
+                        <span class="font-bold text-zinc-200">Full Stack Soluções</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projetos" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <p class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Portfólio em Ação</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">
+                        Projetos em Destaque
+                    </h2>
+                </div>
+                <p class="text-zinc-400 text-sm max-w-md mt-4 md:mt-0">
+                    Aplicações reais com repositórios públicos no GitHub demonstrando organização de código, APIs e interfaces.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Projeto Wedding -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div class="p-6 space-y-4">
+                        <!-- Top Header -->
+                        <div class="flex items-center justify-between">
+                            <span class="p-2.5 rounded-xl bg-pink-500/10 text-pink-500 border border-pink-500/20">
+                                <i class="fa-solid fa-heart text-lg"></i>
+                            </span>
+                            <span class="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-zinc-800 text-zinc-300"> Full Stack </span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">
+                            Projeto Wedding
+                        </h3>
+
+                        <p class="text-zinc-400 text-sm line-clamp-3 leading-relaxed">
+                            Plataforma web para gestão e organização completa de casamentos, convidados, confirmação de presença e controle de eventos em tempo real.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">Node.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">Express</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">MySQL</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">TailwindCSS</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0 border-t border-zinc-800/80 mt-4 flex items-center justify-between pt-4">
+                        <a href="https://github.com/mwrlon/projeto-wedding.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs font-bold text-brand-400 hover:text-brand-500 transition-colors">
+                            <i class="fa-brands fa-github text-base"></i>
+                            <span>Repositório GitHub</span>
+                        </a>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                </div>
+
+                <!-- Project 2: OrçaFácil -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div class="p-6 space-y-4">
+                        <!-- Top Header -->
+                        <div class="flex items-center justify-between">
+                            <span class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                <i class="fa-solid fa-calculator text-lg"></i>
+                            </span>
+                            <span class="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-zinc-800 text-zinc-300"> REST API / System </span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                            OrçaFácil
+                        </h3>
+
+                        <p class="text-zinc-400 text-sm line-clamp-3 leading-relaxed">
+                            Sistema automatizado para geração, cálculo e gestão de orçamentos de serviços e custos, simplificando cotações empresariais.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">Node.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">Knex.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">MySQL</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0 border-t border-zinc-800/80 mt-4 flex items-center justify-between pt-4">
+                        <a href="https://github.com/mwrlon/orcafacil.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors">
+                            <i class="fa-brands fa-github text-base"></i>
+                            <span>Repositório GitHub</span>
+                        </a>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                </div>
+
+                <!-- Project 3: Auth & Security Module -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+                    <div class="p-6 space-y-4">
+                        <!-- Top Header -->
+                        <div class="flex items-center justify-between">
+                            <span class="p-2.5 rounded-xl bg-violet-500/10 text-brand-violet border border-violet-500/20">
+                                <i class="fa-solid fa-shield-halved text-lg"></i>
+                            </span>
+                            <span class="text-[11px] font-mono font-semibold px-2.5 py-1 rounded-full bg-zinc-800 text-zinc-300"> Backend & Auth </span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white group-hover:text-brand-violet transition-colors">
+                            Autenticação & CRUD Node.js
+                        </h3>
+
+                        <p class="text-zinc-400 text-sm line-clamp-3 leading-relaxed">
+                            Módulo de segurança robusto implementando hash de senhas (bcrypt), tokens JWT e operações CRUD otimizadas em banco MySQL relacional.
+                        </p>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="flex flex-wrap gap-1.5 pt-2">
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">Node.js</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">JWT Auth</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">Bcrypt</span>
+                            <span class="text-[11px] font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 pt-0 border-t border-zinc-800/80 mt-4 flex items-center justify-between pt-4">
+                        <a href="https://github.com/mwrlon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs font-bold text-brand-violet hover:text-purple-300 transition-colors">
+                            <i class="fa-brands fa-github text-base"></i>
+                            <span>Ver GitHub do Marlon</span>
+                        </a>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-500 group-hover:text-white transition-colors"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TECH SKILLS & STACK -->
+    <section id="skills" class="py-20 bg-zinc-950/70 border-y border-zinc-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <p class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Linguagens & Ferramentas</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Minha Stack de Desenvolvimento
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Tecnologias que domino e utilizo no dia a dia para construir soluções de ponta a ponta.
+                </p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+                <button onclick="filterSkills('all')" class="skill-tab-btn active px-5 py-2 rounded-xl text-xs font-bold transition-all bg-gradient-accent text-white shadow-lg" data-category="all">
+                    Todas
+                </button>
+                <button onclick="filterSkills('backend')" class="skill-tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800" data-category="backend">
+                    Backend & APIs
+                </button>
+                <button onclick="filterSkills('frontend')" class="skill-tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800" data-category="frontend">
+                    Frontend & UI
+                </button>
+                <button onclick="filterSkills('tools')" class="skill-tab-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800" data-category="tools">
+                    Bancos & Ferramentas
+                </button>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="skills-grid">
+                
+                <!-- Node.js -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="backend">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Node.js</h4>
+                        <p class="text-xs text-zinc-400 font-mono">Express, Knex.js</p>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="backend">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Python</h4>
+                        <p class="text-xs text-zinc-400 font-mono">Scripts & Lógica</p>
+                    </div>
+                </div>
+
+                <!-- MySQL -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="tools">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">MySQL</h4>
+                        <p class="text-xs text-zinc-400 font-mono">Modelagem & Queries</p>
+                    </div>
+                </div>
+
+                <!-- REST APIs -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="backend">
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">APIs REST</h4>
+                        <p class="text-xs text-zinc-400 font-mono">Arquitetura JSON</p>
+                    </div>
+                </div>
+
+                <!-- JavaScript ES6+ -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="frontend">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-300 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">JavaScript</h4>
+                        <p class="text-xs text-zinc-400 font-mono">ES6+, DOM, Async</p>
+                    </div>
+                </div>
+
+                <!-- TailwindCSS -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="frontend">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">TailwindCSS</h4>
+                        <p class="text-xs text-zinc-400 font-mono">UI Responsiva</p>
+                    </div>
+                </div>
+
+                <!-- Git / GitHub -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="tools">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">Git & GitHub</h4>
+                        <p class="text-xs text-zinc-400 font-mono">Controle de Versão</p>
+                    </div>
+                </div>
+
+                <!-- HTML5 / CSS3 -->
+                <div class="skill-card glass-card p-5 rounded-2xl flex items-center space-x-4 border border-zinc-800" data-category="frontend">
+                    <div class="w-12 h-12 rounded-xl bg-orange-600/10 text-orange-500 flex items-center justify-center text-2xl">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-base">HTML5 & CSS3</h4>
+                        <p class="text-xs text-zinc-400 font-mono">Semântica & Layouts</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TIMELINE & EDUCATION SECTION -->
+    <section id="trajetoria" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <p class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Jornada Acadêmica & Prática</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Formação & Experiências
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Construção contínua de conhecimento técnico, participação competitiva e formação em tecnologia.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto relative">
+                
+                <!-- Center Vertical Line -->
+                <div class="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-zinc-800 -translate-x-1/2"></div>
+
+                <div class="space-y-12">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="relative flex flex-col sm:flex-row items-start group">
+                        <div class="flex items-center sm:w-1/2 sm:justify-end sm:pr-8 mb-4 sm:mb-0">
+                            <div class="glass-card p-6 rounded-2xl border border-brand-500/30 w-full sm:max-w-md space-y-2">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-brand-500/20 text-brand-400">
+                                    21 - 27 de Junho de 2026
+                                </span>
+                                <h3 class="text-lg font-bold text-white">Competição de TI - SENAC</h3>
+                                <p class="text-xs text-brand-pink font-medium">Competidor de Desenvolvimento de Software</p>
+                                <p class="text-xs text-zinc-400 leading-relaxed">
+                                    Desafio em tempo real abrangendo construção de backend com Node.js, banco relacional MySQL, APIs REST e apresentação diante de banca avaliadora.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-accent flex items-center justify-center text-white text-xs shadow-lg shadow-brand-500/50 z-10">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <div class="hidden sm:block sm:w-1/2 sm:pl-8"></div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative flex flex-col sm:flex-row items-start group">
+                        <div class="hidden sm:block sm:w-1/2 sm:pr-8"></div>
+
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-zinc-800 border-2 border-brand-violet flex items-center justify-center text-brand-violet text-xs z-10">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="flex items-center sm:w-1/2 sm:pl-8 pl-10">
+                            <div class="glass-card p-6 rounded-2xl border border-zinc-800 w-full sm:max-w-md space-y-2">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-zinc-800 text-zinc-300">
+                                    Maio 2025 – Abril 2027
+                                </span>
+                                <h3 class="text-lg font-bold text-white">Técnico em Dev. de Sistemas Bilingüe</h3>
+                                <p class="text-xs text-brand-violet font-medium">SENAC Erechim - RS</p>
+                                <p class="text-xs text-zinc-400 leading-relaxed">
+                                    Formação prática abrangendo lógica de programação, arquitetura de sistemas, APIs RESTful, bancos de dados relacionais e comunicação técnica bilingüe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative flex flex-col sm:flex-row items-start group">
+                        <div class="flex items-center sm:w-1/2 sm:justify-end sm:pr-8 mb-4 sm:mb-0">
+                            <div class="glass-card p-6 rounded-2xl border border-zinc-800 w-full sm:max-w-md space-y-2">
+                                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-zinc-800 text-zinc-300">
+                                    Ensino Médio
+                                </span>
+                                <h3 class="text-lg font-bold text-white">Formação Básica & Lógica</h3>
+                                <p class="text-xs text-emerald-400 font-medium">Escola Haidée Tedesco Reali</p>
+                                <p class="text-xs text-zinc-400 leading-relaxed">
+                                    Base educacional fortalecendo habilidades analíticas, raciocínio lógico e resolução de problemas.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Node Dot -->
+                        <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-zinc-800 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 text-xs z-10">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+
+                        <div class="hidden sm:block sm:w-1/2 sm:pl-8"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Idiomas Strip -->
+            <div class="mt-16 max-w-2xl mx-auto glass-card p-6 rounded-2xl border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-zinc-800 flex items-center justify-center text-brand-500">
+                        <i class="fa-solid fa-language text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Idiomas</h4>
+                        <p class="text-xs text-zinc-400">Comunicação e leitura técnica</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 text-xs font-mono">
+                    <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-200">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block me-1.5"></span>Português: Nativo
+                    </span>
+                    <span class="px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-200">
+                        <span class="w-2 h-2 rounded-full bg-sky-400 inline-block me-1.5"></span>Inglês: Intermediário / Avançado
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER & CONTACT SECTION -->
+    <section id="contato" class="py-24 relative bg-zinc-950 border-t border-zinc-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Info Panel -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <p class="text-xs font-mono uppercase tracking-widest text-brand-500 font-bold">Contato Direto</p>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">
+                            Vamos conversar sobre novos projetos?
+                        </h2>
+                    </div>
+
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Estou disponível para <strong class="text-zinc-200">oportunidades de estágio, projetos de desenvolvimento e colaborações de software</strong>. Envie uma mensagem no e-mail ou conecte-se pelas redes sociais!
+                    </p>
+
+                    <!-- Contact Details Cards -->
+                    <div class="space-y-3 pt-2">
+                        
+                        <div class="p-4 rounded-xl glass-card border border-zinc-800 flex items-center justify-between group">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center">
+                                    <i class="fa-regular fa-envelope text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[11px] text-zinc-400 uppercase tracking-wider font-mono">E-mail Profissional</p>
+                                    <p class="text-sm font-semibold text-white">marlonmjr16@gmail.com</p>
+                                </div>
+                            </div>
+                            <button onclick="copyToClipboard('marlonmjr16@gmail.com', 'E-mail copiado!')" title="Copiar e-mail" class="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors">
+                                <i class="fa-regular fa-copy text-sm"></i>
+                            </button>
+                        </div>
+
+                        <div class="p-4 rounded-xl glass-card border border-zinc-800 flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] text-zinc-400 uppercase tracking-wider font-mono">Localização</p>
+                                <p class="text-sm font-semibold text-white">Erechim - Rio Grande do Sul, Brasil</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Social Icons Strip -->
+                    <div class="pt-4">
+                        <p class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-3">Redes Sociais:</p>
+                        <div class="flex items-center space-x-3">
+                            <a href="https://www.linkedin.com/in/marlonjrr/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-brand-500 text-zinc-300 hover:text-white hover:bg-brand-500 flex items-center justify-center transition-all shadow-md group" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
+                            </a>
+                            <a href="https://instagram.com/mwrlonn" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-pink-500 text-zinc-300 hover:text-white hover:bg-pink-600 flex items-center justify-center transition-all shadow-md group" title="Instagram @mwrlonn">
+                                <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+                            </a>
+                            <a href="https://github.com/mwrlon" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-400 text-zinc-300 hover:text-white hover:bg-zinc-800 flex items-center justify-center transition-all shadow-md group" title="GitHub mwrlon">
+                                <i class="fa-brands fa-github text-lg group-hover:scale-110 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Contact Form Simulator -->
+                <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-zinc-800">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            Envie uma Mensagem Direta
+                        </h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1">Seu Nome</label>
+                                <input type="text" required id="form-name" placeholder="Ex: Ana Silva" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1">Seu E-mail</label>
+                                <input type="email" required id="form-email" placeholder="seuemail@exemplo.com" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1">Assunto</label>
+                            <input type="text" required id="form-subject" placeholder="Ex: Oportunidade de Estágio / Projeto" class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-1">Mensagem</label>
+                            <textarea required id="form-message" rows="4" placeholder="Escreva aqui detalhes sobre o projeto ou vaga..." class="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-800 text-white text-sm focus:outline-none focus:border-brand-500 transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-gradient-accent text-white font-bold rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:opacity-95 transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Enviar Mensagem via Mailto</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Copy -->
+            <div class="mt-20 pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 space-y-4 sm:space-y-0">
+                <p>&copy; 2026 Marlon Miranda Junior. Todos os direitos reservados.</p>
+                <div class="flex items-center space-x-4">
+                    <span class="font-mono">Desenvolvido com HTML, TailwindCSS & JS</span>
+                    <span>•</span>
+                    <a href="#hero" class="hover:text-brand-400 transition-colors">Voltar ao topo <i class="fa-solid fa-arrow-up ms-1"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Custom Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="glass-card px-5 py-3.5 rounded-xl border border-brand-500/40 shadow-2xl flex items-center space-x-3 bg-zinc-900/95 text-white">
+            <div class="w-8 h-8 rounded-full bg-brand-500/20 text-brand-500 flex items-center justify-center">
+                <i class="fa-solid fa-check text-sm"></i>
+            </div>
+            <span id="toast-message" class="text-xs font-semibold">Notificação</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
